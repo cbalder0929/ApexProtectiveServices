@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Protective Services — Chicago Security | Licensed & Insured</title>
+<meta name="description" content="Professional security solutions for bars, nightclubs, restaurants and special events in Chicago. Off-duty police, trained guards, 24/7 reliable service. Licensed & insured.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #111111;
+    --bg-3: #161616;
+    --ink: #f5f1e8;
+    --ink-muted: #b8b0a0;
+    --ink-dim: #7a7268;
+    --gold: #d4af37;
+    --gold-bright: #f0c849;
+    --gold-deep: #8a6f1f;
+    --rule: rgba(212, 175, 55, 0.22);
+    --rule-strong: rgba(212, 175, 55, 0.55);
+    --font-display: 'Cinzel', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 10, 10, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .nav-brand img {
+    height: 52px;
+    width: 52px;
+    object-fit: contain;
+  }
+  .nav-brand-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    line-height: 1.1;
+  }
+  .nav-brand-text span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    color: var(--ink-muted);
+    margin-top: 4px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 50%, var(--gold-deep) 100%);
+    color: #000;
+    padding: 11px 22px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    border: 1px solid var(--gold-bright);
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+  }
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  }
+  .nav-hamburger {
+    display: none;
+    background: none;
+    border: 1px solid var(--rule);
+    color: var(--gold);
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  /* ============ PAGE HEADER ============ */
+  .page-header {
+    border-bottom: 1px solid var(--rule);
+    padding: 72px 32px 64px;
+    text-align: center;
+    background: radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.07) 0%, transparent 70%);
+  }
+  .page-header-eyebrow {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .page-header-eyebrow::before,
+  .page-header-eyebrow::after {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .page-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
+  .page-header h1 em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold);
+  }
+  .page-header p {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    color: var(--ink-muted);
+    max-width: 560px;
+    margin: 0 auto 36px;
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 50%, var(--gold-deep) 100%);
+    color: #000;
+    padding: 16px 32px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    border: 1px solid var(--gold-bright);
+    transition: all 0.3s;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.45);
+  }
+
+  /* ============ SECTIONS ============ */
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 32px;
+  }
+  .section-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* ============ SERVICES ============ */
+  #services {
+    border-bottom: 1px solid var(--rule);
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .service-card {
+    background: var(--bg-2);
+    padding: 36px 28px;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s;
+  }
+  .service-card:hover { background: var(--bg-3); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: inline-flex;
+  }
+  .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .service-card p {
+    font-family: var(--font-serif);
+    font-size: 16px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+  .service-num {
+    position: absolute;
+    top: 24px; right: 24px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    color: var(--gold);
+    opacity: 0.45;
+  }
+
+  /* ============ CONTACT ============ */
+  #contact {
+    background: var(--bg-2);
+    border-top: 1px solid var(--rule);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .contact-card {
+    background: var(--bg-2);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background 0.3s;
+  }
+  .contact-card:hover { background: var(--bg-3); }
+  .contact-card-icon {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-card-label {
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+  .contact-card-value {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .contact-card-value a:hover { color: var(--gold); }
+  .contact-card-sub {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    color: var(--ink-muted);
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: #050505;
+    border-top: 1px solid var(--rule-strong);
+    padding: 32px;
+    text-align: center;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink-dim);
+    font-family: var(--font-sans);
+  }
+  .footer-inner .est {
+    font-family: var(--font-display);
+    color: var(--gold);
+    letter-spacing: 0.2em;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: block; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .nav-inner { padding: 14px 20px; }
+  }
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .page-header { padding: 48px 24px; }
+    .section-inner { padding: 56px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">
+      <img src="apexlogo.jpg" alt="Apex Protective Services">
+      <div class="nav-brand-text">
+        APEX
+        <span>Protective Services</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="book.html" class="nav-cta">Book a Call</a>
+    <button class="nav-hamburger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- ============ PAGE HEADER ============ -->
+<div class="page-header">
+  <div class="page-header-eyebrow">CHICAGO, IL · EST. 2025</div>
+  <h1>Apex <em>Protective</em> Services</h1>
+  <p>Professional security for bars, nightclubs, restaurants, and events across Chicagoland.</p>
+  <a href="book.html" class="btn-primary">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Book a Free Consultation
+  </a>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">SERVICES</div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <span class="service-num">01</span>
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Off-Duty Police</h3>
+        <p>Sworn law enforcement professionals on-site at your venue.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">02</span>
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Trained Security</h3>
+        <p>Prevention, de-escalation, and protection — uniformed or plainclothes.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">03</span>
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>24/7 Service</h3>
+        <p>Day or night, weekends or holidays — rapid response every shift.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">04</span>
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Door Staff</h3>
+        <p>Professional bouncers and ID-check specialists who match your venue's vibe.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">05</span>
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4v6c0 5-9 9-9 9s-9-4-9-9V7z"/></svg>
+        </div>
+        <h3>Event Security</h3>
+        <p>Scalable teams for concerts, private parties, and corporate functions.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-num">06</span>
+        <div class="service-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3>Mobile Patrol</h3>
+        <p>Marked vehicle patrols of your property with logged check-ins.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">CONTACT</div>
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="contact-card-label">Phone</div>
+        <div class="contact-card-value"><a href="tel:+13125550199">(312) 555-0199</a></div>
+        <div class="contact-card-sub">Available 24/7</div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-card-label">Email</div>
+        <div class="contact-card-value"><a href="mailto:info@apexpcom.com">info@apexpcom.com</a></div>
+        <div class="contact-card-sub">We reply within one business day</div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contact-card-label">Service Area</div>
+        <div class="contact-card-value">Chicago &amp; Chicagoland</div>
+        <div class="contact-card-sub">Licensed &amp; insured in Illinois</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Apex Protective Services. All rights reserved.</div>
+    <div class="est">★ EST. 2025 ★</div>
+    <div>Licensed &amp; Insured · Chicago, IL</div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.style.display === 'flex';
+      navLinks.style.display = isOpen ? 'none' : 'flex';
+      if (!isOpen) {
+        Object.assign(navLinks.style, {
+          position: 'absolute', top: '100%', left: '0', right: '0',
+          background: 'rgba(10,10,10,0.98)', flexDirection: 'column',
+          padding: '24px', gap: '20px', borderBottom: '1px solid var(--rule)'
+        });
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
